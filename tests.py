@@ -2,6 +2,7 @@ import unittest
 from task1 import y
 from task2 import res,y1
 from task3 import match
+from task4 import task4
 from task5 import y2
 
 
@@ -22,8 +23,11 @@ class Testing(unittest.TestCase):
         self.assertEqual(match[1], "gmail.org")
 
     def test_string4(self):
-        self.assertRaises(AttributeError)
+        number = '380964329919'
+        self.assertEqual(task4(number), number)
+        with self.assertRaises(AttributeError):
+            task4('210985683498')
 
     def test_string5(self):
         self.assertEqual(type(y2), list)
-        self.assertCountEqual(y2, 11)
+        self.assertEqual(len(y2), 11)
